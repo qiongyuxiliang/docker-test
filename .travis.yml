@@ -4,5 +4,9 @@ addons:
 before_install:
   - npm install -g express
   - npm install
-#script:
+script:
   #- npm start # build your site
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker build -t qiongyuxiliang/docker-test:latest
+  - docker push qiongyuxiliang/docker-test:latest
+
