@@ -7,6 +7,6 @@ before_install:
 script:
   #- npm start # build your site
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t qiongyuxiliang/docker-test:latest
-  - docker push qiongyuxiliang/docker-test:latest
+  - docker build -t qiongyuxiliang/dockertest:latest
+  - docker push qiongyuxiliang/dockertest:latest
 
