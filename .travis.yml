@@ -6,6 +6,6 @@ before_install:
   - npm install
 script:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t qiongyuxiliang/docker-test:latest
+  - docker build -t qiongyuxiliang/docker-test:latest .
   - docker push qiongyuxiliang/docker-test:latest
 
