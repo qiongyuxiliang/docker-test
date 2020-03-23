@@ -1,0 +1,8 @@
+version: "2" 
+services:
+    infos:
+        container_name: docker-test 
+        image: qiongyuxiliang/docker-test:latest
+        ports:
+            - "8082:8011"
+        restart: on-failure
