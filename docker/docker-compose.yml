@@ -2,7 +2,11 @@ version: "2"
 services:
     infos:
         container_name: docker-test 
-        image: qiongyuxiliang/docker-test:latest
-        ports:
-            - "8082:8011"
+        image: docker-test:latest
+        volumes:
+        - ./:/usr/local/app
         restart: on-failure
+        working_dir: /usr/local/app
+        ports:
+        - 8090:8090
+        command: npm start
