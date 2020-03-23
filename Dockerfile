@@ -1,0 +1,3 @@
+FROM ubuntu
+
+EXPOSE 8010

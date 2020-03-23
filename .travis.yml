@@ -1,0 +1,8 @@
+language: node_js
+addons:
+  chrome: stable
+before_install:
+  - npm install -g express
+  - npm install
+#script:
+  #- npm start # build your site
